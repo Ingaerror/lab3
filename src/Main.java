@@ -1,0 +1,78 @@
+import models.*;
+import models.Character;
+
+
+public class Main {
+    public static void main(String[] args) {
+        Character louis = new Character("Louis", true);
+        Character invalid = new Character("Инвалид");
+        Character human = new Character("человек", false, "страдающий бессоницей");
+        Character someone = new Character("кто-нибудь");
+        Action action = new Action(louis);
+        Item grid = new Item("решетку");
+        Item peak = new Item("пиками");
+        Item grass = new Item("траве", "проклятой");
+        Item treeСrowns = new Item("кроны деревьев");
+        Item shovel = new Item("лопата");
+        Item shovels = new Item("лопату");
+        Item leaf = new Item("листвы");
+        Item knife = new Item("ножом");
+        Item strips = new Item("полоски", "брезентовые");
+        Item pick = new Item("кирку");
+        Item picks = new Item("кирки");
+        Item tools = new Item("инструменты");
+        Item tree  = new Item("деревьям");
+        Item lightInWindow = new Item("огонек в окне");
+        Item sole = new Item("подошвами");
+        Item asphalt = new Item("асфальт");
+        Item cars = new Item("машины", "подъезжающей");
+        Item noise = new Item("шум");
+        Item sound = new Item("звука");
+        Item steps = new Item("шагов", "чужих");
+        Item creak = new Item("скрипа");
+        Item window = new Item("окна", "открываемого");
+        Item car = new Item("машине", "'Сивик'");
+        Item keys = new Item("ключи");
+        Item pocket = new Item("карманах");
+        Item change = new Item("Мелочь");
+        Item mistake = new Item("неудача");
+        Flashlight flashlight = new Flashlight("фонарь");
+        Flashlight beam = new Flashlight("луч", "Короткий");
+        Flashlight shadow = new Flashlight("тень", "небольшую черную");
+        Light light = new Light("освящении", "тусклом уличном");
+        Light newlight = new Light("освещение", "уличное");
+        Button button = new Button();
+        grid.give(peak);
+        action.secondAction();
+        action.thirdAction(grass);
+        action.fourthAction(shovel, treeСrowns, light);
+        action.fifthAction(flashlight, grass);
+        action.sixthAction();
+        action.seventhAction(flashlight, shadow);
+        action.eighthAction(flashlight, button);
+        action.ninthAction(leaf, flashlight, beam);
+        action.tenthAction(button);
+        action.eleventhAction();
+        action.twelvethAction(knife, strips, picks, tools);
+        action.thirteenthAction(tree);
+        action.fourteenthAction();
+        action.fifteenthAction(lightInWindow);
+        action.sixteenthAction(invalid, human);
+        action.seventeenthAction();
+        action.eighteenthAction(newlight);
+        action.nineteenthAction(pick, shovels, flashlight);
+        action.twentiethAction(someone);
+        action.twentyFirstAction(sole, asphalt);
+        action.twentySecondAction(car);
+        action.twentyThirdAction(car);
+        action.twentyFourthAction(noise, cars, sound, steps, creak, window);
+        action.twentyFifthAction(car, pick, shovels, keys);
+        action.twentySixthAction(keys, pocket);
+        action.twentySeventhAction();
+        action.twentyEighthAction();
+        action.twentyNinth(keys);
+        action.thirtieth(keys, grass, flashlight);
+        action.thirtyFirstAction();
+        action.thirtySecondAction(mistake);
+    }
+}
